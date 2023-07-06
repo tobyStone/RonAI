@@ -1,4 +1,9 @@
-library(tensorflow)
+#devtools::install_github("rstudio/tensorflow")
+#library(tensorflow)
+#install_tensorflow()
+#miniconda install
+#hello <- tf$constant("Hello")
+#print(hello)
 num_samples_per_class <- 1000
 Sigma <- rbind(c(1, 0.5), c(0.5, 1))
 negative_samples <- MASS::mvrnorm(n = num_samples_per_class, mu = c(0, 3), Sigma = Sigma)
@@ -9,7 +14,7 @@ plot(x = inputs[,1], y = inputs[,2], col = ifelse(targets[,1] == 0, "purple", "g
 input_dim <- 2
 output_dim <- 1
 W <- tf$Variable(initial_value = tf$random$uniform(shape(input_dim, output_dim)))
-b <- tf$Variable(initial_value = tf$zeroes(shape(output_dim)))
+b <- tf$Variable(initial_value = tf$zeros(shape(output_dim)))
 model <- function(inputs)
   tf$matmul(inputs, W) + b
 square_loss <- function(targets, predictions){
