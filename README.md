@@ -10,6 +10,7 @@ Binary classification mid-processing (usefully slowing down my processor enough 
 ![](https://github.com/tobyStone/RonAI/blob/main/linear%20classification%20real%20world%20data.gif)
 
 
+
 Linear classifcation of random data points:
 
 ![](https://github.com/tobyStone/RonAI/blob/main/linear_classification.png)
